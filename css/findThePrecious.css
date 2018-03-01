@@ -6,6 +6,54 @@ body {
 /*
 =========================== General Elements ======================================
 */
+@font-face {
+    font-family: 'party_businessregular';
+    src: url('../fonts/textes/partybusiness-webfont.eot');
+    src: url('../fonts/textes/partybusiness-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/textes/partybusiness-webfont.woff2') format('woff2'),
+         url('../fonts/textes/partybusiness-webfont.woff') format('woff'),
+         url('../fonts/textes/partybusiness-webfont.ttf') format('truetype'),
+         url('../fonts/textes/partybusiness-webfont.svg#party_businessregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'anironregular';
+    src: url('../fonts/titres/anirm___-webfont.eot');
+    src: url('../fonts/titres/../fonts/titre/anirm___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/titres/anirm___-webfont.woff2') format('woff2'),
+         url('../fonts/titres/anirm___-webfont.woff') format('woff'),
+         url('../fonts/titres/anirm___-webfont.ttf') format('truetype'),
+         url('../fonts/titres/anirm___-webfont.svg#anironregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'tengwar_annatarregular';
+    src: url('../fonts/Symboles/tngan-webfont.eot');
+    src: url('../fonts/Symboles/tngan-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Symboles/tngan-webfont.woff2') format('woff2'),
+         url('../fonts/Symboles/tngan-webfont.woff') format('woff'),
+         url('../fonts/Symboles/tngan-webfont.ttf') format('truetype'),
+         url('../fonts/Symboles/tngan-webfont.svg#tengwar_annatarregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'party_businessregular', Arial, sans-serif;
+}
+h2, h3 {
+    margin: 3rem;
+    font-family: 'anironregular', Arial, sans-serif;
+}
+h2::before, h2::after {
+  content: 'ij';
+  padding: 0 10px;
+  vertical-align: top;
+  font-family: 'tengwar_annatarregular', Arial, sans-serif;
+  color: #ff5f01;
+}
 .bg-dark {
   background-image: url("../img/_bg_dark.png");
 }
@@ -21,20 +69,40 @@ body {
 .navbar-brand {
   padding: 10px 15px 0px 15px;
 }
-nav ul li:not(:last-of-type) {
-  border-right: 1px solid white;
+nav ul li:not(:last-of-type) a::after {
+      font-size: 15px;
+      content: " |";
+      font-family: sans-serif;
+}
+@media screen and (max-width:1141px) {
+  nav ul li:not(:last-of-type) a::after {
+    display: none;
+  }
+}
+nav ul li:hover {
+  text-decoration: underline;
+  color: white;
+}
+nav ul li a {
+  color: white;
+  font-size: 30px;
 }
 /*
 =========================== banner ======================================
 */
 .carousel-caption {
-  bottom: 45%;
+  bottom: 35%;
+}
+.carousel-caption h3 {
+  font-size: 5rem;
+}
+.carousel-caption p {
+  font-size: 3rem;
 }
 
 /*
 =========================== Fellows ======================================
 */
-
 #gandalf {
   background: url("../img/_gandalf.png") center no-repeat;
 }
@@ -44,35 +112,55 @@ nav ul li:not(:last-of-type) {
 #gimli {
   background: url("../img/_gimli.png") center no-repeat;
 }
+#gandalf, #aragorn, #gimli {
+  background-size: cover;
+}
+#Fellows span {
+  font-size: 0.5em;
+}
 
 .rewardNotice, .rewardPicture {
   min-height: 373px;
 }
+.rewardPicture {
+  opacity: 0.7;
+  padding-top: 10px;
+  margin: 10px;
+}
 .rewardNotice p {
   color: white
 }
-
-.rewardPicture p:not(.orange) {
-  margin: 5px 10px;
+.rewardPicture p {
+  margin: 15px 10px;
   padding: 15px 5px;
   text-align: center;
+  font-size:2rem;
+}
+.rewardPicture:not(.dead) p {
   color: black;
   background-color: rgba(255,255,255,0.7);
   border-radius: 10px;
 }
-.rewardPicture:hover p{
-  opacity: 0;
+.rewardPicture.dead p {
+  font-size: 3rem;
 }
-
 .rewardPicture h3 {
   color: white;
   font-size: 3rem;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 180px;
 }
-.rewardPicture:hover h3{
+
+.rewardPicture:not(.dead):hover p{
+  opacity: 0;
+}
+.rewardPicture:not(.dead):hover {
+  opacity: 1;
+}
+
+.rewardPicture:not(.dead):hover h3{
 font-size: 1.5rem;
-margin-top: 275px;
+margin-top: 235px;
 }
 /*
 =========================== GetMyReward ======================================
