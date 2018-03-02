@@ -42,6 +42,7 @@ body {
 
 body {
     font-family: 'party_businessregular', Arial, sans-serif;
+    font-size: 1.5em;
 }
 h2, h3 {
     margin: 3rem;
@@ -54,14 +55,28 @@ h2::before, h2::after {
   font-family: 'tengwar_annatarregular', Arial, sans-serif;
   color: #ff5f01;
 }
+hr {
+  width: 50%;
+  color: #ff5f01;
+  background-color: #ff5f01;
+  border-top: 5px;
+  border-top-style:  solid;
+  margin-top: 0;
+}
+section {
+  margin: 35px 0;
+}
 .bg-dark {
   background-image: url("../img/_bg_dark.png");
 }
 .bg-orange {
   background-color: #ff5f01;
 }
-.orange {
+.orange, s {
   color: #ff5f01;
+}
+.black {
+  color: black;
 }
 /*
 =========================== Header and Navbar ======================================
@@ -99,10 +114,29 @@ nav ul li a {
 .carousel-caption p {
   font-size: 3rem;
 }
+.carousel-caption q {
+  font-size: 3rem;
+  float: right;
+}
 
 /*
 =========================== Fellows ======================================
 */
+.nav-link {
+  color: grey;
+  font-size: 2rem;
+  padding-bottom: 25px;
+}
+.nav-link:hover {
+  color: black;
+}
+.nav-pills .nav-link.active {
+  color: #ff5f01;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 #gandalf {
   background: url("../img/_gandalf.png") center no-repeat;
 }
@@ -171,13 +205,12 @@ margin-top: 235px;
   text-align: center;
   width:10rem;
   padding: 20px;
-  -webkit-transform : skewX(30deg);
-  -moz-transform : skewX(30deg);
-  -ms-transform : skewX(30deg);
-  -o-transform : skewX(30deg);
-  transform : skewX(30deg);
+  -webkit-transform : skewX(-15deg);
+  -moz-transform : skewX(-15deg);
+  -ms-transform : skewX(-15deg);
+  -o-transform : skewX(-15deg);
+  transform : skewX(-15deg);
 }
-
 /*
 =========================== hunters ======================================
 */
@@ -202,7 +235,3 @@ margin-top: 235px;
 /*
 =========================== footer ======================================
 */
-footer {
-  background-image: url("../img/_logo.png");
-  background-repeat: no-repeat;
-  background-position: bottom right;
