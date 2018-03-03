@@ -19,27 +19,13 @@
 </head>
 
 <body>
-	<!-- facebook like button control start
-	<div id="fb-root"></div>
-	<script>
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12';
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
-	 facebook like button control end -->
-
 
 	<!-- ============================================================================================================
 																			Header and Navbar
 		============================================================================================================== -->
 
 	<header>
-		<nav class="navbar navbar-expand-md navbar-dark bg-orange">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-orange">
 			<p class="navbar-brand"><img src="img/_logo.png" alt="Find the precious"></p>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -60,7 +46,7 @@
 																			Carousel
 		============================================================================================================== -->
 
-	<div id="banner" class="carousel slide" data-ride="carousel">
+	<div id="banner" class="carousel slide bg-dark" data-ride="carousel">
 		<ul class="carousel-indicators">
 			<li data-target="#banner" data-slide-to="0" class="active"></li>
 			<li data-target="#banner" data-slide-to="1"></li>
@@ -69,21 +55,21 @@
 
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="image-fluid" src="img/power.jpg" alt="Nazgul King">
+				<img class="d-block w-100" src="img/power.jpg" alt="Nazgul King">
 				<div class="carousel-caption d-none d-md-block">
 					<h3>Besoin d'une multiprise?</h3>
 					<p>Rejoignez nous et branchez votre ordinateur sur vos doigts!</p>
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img class="image-fluid" src="img/ring.jpg" alt="The ring of power">
+				<img class="d-block w-100" src="img/ring.jpg" alt="The ring of power">
 				<div class="carousel-caption d-none d-md-block d-none d-md-block">
 					<h3>L'anneau</h3>
 					<p> ...trop la classe, non?</p>
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img class="image-fluid" src="img/_dark_vador.jpg" alt="We need you !">
+				<img class="d-block w-100" src="img/_dark_vador.jpg" alt="We need you !">
 				<div class="carousel-caption d-none d-md-block">
 					<h3>Gollum</h3>
 					<p>I am,.....your father !<q>-d.v.</q></p>
@@ -110,39 +96,48 @@
 
 		<ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
 			<li class="nav-item">
-				<a class="nav-link active" id="pills-wanted-tab" data-toggle="pill" href="#pills-wanted" role="tab" aria-controls="pills-wanted" aria-expanded="true">Most wanted</a>
+				<a class="nav-link active" id="pills-wanted-tab" data-toggle="pill" href="#pills-wanted" role="tab" aria-controls="pills-tab" aria-expanded="true">Most wanted</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" id="pills-dangerous-tab" data-toggle="pill" href="#pills-dangerous" role="tab" aria-controls="pills-dangerous" aria-expanded="true">Most dangerous</a>
+				<a class="nav-link" id="pills-dangerous-tab" data-toggle="pill" href="#pills-dangerous" role="tab" aria-controls="pills-tab" aria-expanded="true">Most dangerous</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" id="pills-captured-tab" data-toggle="pill" href="#pills-captured" role="tab" aria-controls="pills-captured" aria-expanded="true">Already captured</a>
+				<a class="nav-link" id="pills-captured-tab" data-toggle="pill" href="#pills-captured" role="tab" aria-controls="pills-tab" aria-expanded="true">Already captured</a>
 			</li>
 		</ul>
 
-		<div class="row justify-content-around">
-			<article class="rewardNotice col-12 col-md-5 col-lg-3 img-thumbnail bg-dark">
-				<div class="rewardPicture" id="gandalf">
-					<p>reward <span class="orange">1000</span> golden coins</p>
-					<h3>Gandalf</h1>
-				</div>
-				<p>A very dangerous wizard, balrog killer...</p>
-			</article>
-			<article class="rewardNotice col-12 col-md-5 col-lg-3 img-thumbnail bg-dark bg-dark">
-				<div class="rewardPicture" id="aragorn">
-					<p>reward <span class="orange">800</span> golden coins</p>
-						<h3>Aragorn</h1>
-				</div>
-				<p>Sauron's finger says him his sword is dangerous...</p>
-			</article>
-			<article class="rewardNotice col-12 col-md-5 col-lg-3 img-thumbnail bg-dark">
-				<div class="rewardPicture dead" id="gimli">
-					<p><span class="orange">Dead</span></p>
-						<h3><s><span class="black>"Gimli</span></s></h1>
-				</div>
-				<p>A dwarf, wich a beard and an axe...</p>
-			</article>
-		</div>
+<div class="row justify-content-around">
+		<article class="rewardNotice offset-1 col-10 col-md-5 col-lg-3 bg-dark">
+			<div class="rewardPicture" id="gandalf">
+				<img class="img-fluid" src="img/_gandalf.png" alt="Gandalf reward picture">
+					<div class="carousel-caption">
+						<p>reward <span class="orange">1000</span> golden coins</p>
+						<h3>Gandalf</h3>
+					</div>
+			</div>
+			<p>A very dangerous wizard, balrog killer...</p>
+		</article>
+		<article class="rewardNotice offset-1 col-10 col-md-5 col-lg-3 bg-dark bg-dark">
+			<div class="rewardPicture" id="aragorn">
+<img class="img-fluid" src="img/_aragorn.png" alt="Gandalf reward picture">
+	<div class="carousel-caption">
+				<p>reward <span class="orange">800</span> golden coins</p>
+				<h3>Aragorn</h3>
+			</div>
+			</div>
+			<p>Sauron's finger says him his sword is dangerous...</p>
+		</article>
+		<article class="rewardNotice offset-1 col-10 col-md-5 col-lg-3 bg-dark">
+			<div class="rewardPicture dead" id="gimli">
+<img class="img-fluid" src="img/_gimli.png" alt="Gandalf reward picture">
+	<div class="carousel-caption">
+				<p><span class="orange">Dead</span></p>
+				<h3><s><span class="white">Gimli</span></s></h3>
+			</div>
+			</div>
+			<p>A dwarf, wich a beard and an axe...</p>
+		</article>
+	</div>
 	</section>
 
 	<!-- ============================================================================================================
@@ -150,70 +145,75 @@
 				============================================================================================================== -->
 
 	<section id="GetMyReward" class="bg-dark text-light container-fluid">
-	<hr/>
+		<hr/>
 		<h2>I have captured one of them, how to get my reward?</h2>
 		<div class="row">
-		<p class="col-12 col-md-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-			in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p class="col-12 col-md-4"><img src="img/_coin_sauron.png" alt="Sauron's golden coin" /></p>
-	</div>
-		<div class="skewX_a">
+			<p class="col-12 col-md-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="col-12 col-md-2"><img src="img/_coin_sauron.png" class="img-fluid" alt="Sauron's golden coin" /></p>
+		</div>
+		<div class="w-100 text-center">
+		<div class="btn btn-custom btn-custom-white">
 			<a class="orange" href="#ContactUs">Contact us</a>
 		</div>
+	</div>
+		<hr/>
 
 	</section>
 
 	<!-- ============================================================================================================
 																						Best Hunters
 					============================================================================================================== -->
-
-	<section class="container" id="hunters">
-			<hr/>
-		<h2>Best hunters</h2>
-<div class="row">
-	<div class="col-12 col-md-6">
-		<div class="row">
-			<div class="col-6">
-				<img class="hunterAvatar" src="img/_hunter1.png" alt="ElevesKiller22 avatar" />
-			</div>
-			<div class="col-6">
-				<h3>ElevesKiller22</h3>
-				<p>2 captures -
-				<a href="http://www.profil.link.com" target="_blank">Profil</a>
-				</p>
-					<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
-			</div>
-		</div>
-	</div>
+<section class="container-fluid" id="hunters">
+	<h2>Our best hunters</h2>
+	<div class="row">
 		<div class="col-12 col-md-6">
 			<div class="row">
-				<div class="col-6">
-					<img class="hunterAvatar" src="img/_hunter2.png" alt="Goblin45 avatar" />
-					<div class="col-6">
-						<h3>Goblin45</h3>
-						<p>1 capture -
-							<a href="http://www.profil.link.com" target="_blank">Profil</a>
-						</p>
+				<div class="col-3">
+					<img class="hunterAvatar img-fluid" src="img/_hunter1.png" alt="ElevesKiller22 avatar" />
+				</div>
+				<div class="col-9">
+					<p class="orange"><strong>elevesKiller22</strong></p>
+					<p>2 captures -
+						<a href="http://www.profil.link.com" target="_blank">profil</a>
+					</p>
+					<div class="btn btn-custom">
+						<a href="#"><img src="img/smallRing.png" alt="little gold ring"><span class="orange"> 12 hace</span></a>
 					</div>
-					<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
 				</div>
 			</div>
 		</div>
+		<div class="col-12 col-md-6">
+			<div class="row">
+				<div class="col-3">
+					<img class="hunterAvatar img-fluid" src="img/_hunter2.png" alt="Goblin45 avatar" />
+				</div>
+				<div class="col-9">
+					<p class="orange"><strong>goblin45</strong></p>
+					<p>1 capture -
+						<a href="http://www.profil.link.com" target="_blank">profil</a>
+					</p>
+					<div class="btn btn-custom">
+						<a class="orange" href="#"><img src="img/smallRing.png" alt="little gold ring"><span class="orange"> 18 hace</span></a>
+					</div>
+				</div>
+			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
 	<!-- ============================================================================================================
 																					About the ring
 				============================================================================================================== -->
 
 
-	<section id="AboutTheRing" class="bg-dark text-light">
+	<section id="AboutTheRing" class="bg-dark text-light container-fluid">
 		<hr/>
 		<h2>About the ring</h2>
 		<article>
-			<h4 class="bg-warning">Ring Capabilities</h4>
+			<h4 class="bg-orange">Ring Capabilities</h4>
 			<p>What our master Sauron do with the ring?</p>
-			<table>
+			<table class="w-75 mx-auto">
 				<thead>
 					<tr>
 						<th>Feature</th>
@@ -238,61 +238,75 @@
 		</article>
 
 		<article>
-			<h4 class="bg-warning">Why the ring is awesome?</h4>
-			<p>My preciooooooousssssss ! hrk hrk, we want our preeciooooooouuusssss !!<br><cite>Gollum</cite></p>
-			<img class="rounded-circle" src="img/_gollum.png" alt="Gollum looking at his precious" />
+			<h4 class="bg-orange">Why the ring is awesome?</h4>
+			<div class="row">
+				<p class="col-12 col-md-10">My preciooooooousssssss ! hrk hrk, ! we want our preeciooooooouuusssss !!<br><q>- gollum</q></p>
+				<img class="col-12 col-md-2 img-fluid" src="img/_gollum.png" alt="Gollum looking at his precious" />
+			</div>
 		</article>
-
 	</section>
 
+	<hr/>
 	<!-- ============================================================================================================
 																					Join the army
 				============================================================================================================== -->
 
-	<section class="container" id="JoinTheArmy">
-		<hr/>
+	<section class="container-fluid" id="JoinTheArmy">
 		<h2>Join Mordor Army, we need you !</h2>
 		<div class="row">
 			<div class="col-12 col-md-7">
 				<p>Post quorum necem nihilo lenius ferociens Gallus ut leo cadaveribus pastus multa huius modi scrutabatur. quae singula narrare non refert, me professione modum, quod evitandum est, excedamus.</p>
 			</div>
 			<div class="col-12 col-md-4">
-				<img src="img/_army.png" alt="recruitment campaign picture" />
+				<img src="img/_army.png" class="img-fluid" alt="recruitment campaign picture" />
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-12 col-md-3">
-				<img src="img/_weneedyou-1.png" alt="recruitment campaign picture" />
+				<img src="img/_weneedyou-1.png" class="img-fluid" alt="recruitment campaign picture" />
 			</div>
-			<div class="col-12 col-md-9">
-				<input type="button" name="More info on SauronRulesThemAll.com" value="More info on SauronRulesThemAll.com" />
+			<div class="col-12 col-md-9 text-center align-self-center">
+				<h3 class="orange">More info on</h3>
+				<div class="btn btn-custom">
+					<a class="orange" href="#">sauronrulesthemall.com<a/>
+				</div>
 			</div>
+		</div>
 	</section>
 
 	<!-- ============================================================================================================
 																					Contact
 				============================================================================================================== -->
 
-	<section id="ContactUs" class="bg-dark text-light">
+	<section id="ContactUs" class="container-fluid bg-dark text-light">
 		<hr/>
 		<h2>Contact us</h2>
 		<div class="row">
 			<div class="col-12 col-md-6">
+				<br/>
 				<form>
-					<input type="email" name="contactAdress" placeholder="contactAdress">
-					<input type="url" name="contactUrl" placeholder="contactUrl">
-					<select name="yourRequest">
-	        <option value="newFixer" selected>I have seen one of them</option>
-	        <option value="newFollower">I want to sign in</option>
-	        <option value="newTarget">It is MY preciooooooousssssss</option>
-	        <option value="yesMyLord">my name is Illuvatar</option>
-	      </select>
-					<textarea placeholder="Your message"></textarea>
-					<input type="submit" name="yourOrdersMaster" value="yourOrdersMaster">
+					<div class="form-group">
+						<input type="email" class="form-control" name="contactAdress" placeholder="@">
+					</div>
+					<div class="form-group">
+						<input type="url" class="form-control" name="contactUrl" placeholder="address">
+					</div>
+					<div class="form-group">
+						<select name="yourRequest" class="form-control">
+			        <option value="newFixer" selected>I have seen one of them</option>
+			        <option value="newFollower">I want to sign in</option>
+			        <option value="newTarget">It is my preciooooooousssssss</option>
+			        <option value="yesMyLord">my name is Illuvatar</option>
+		     		</select>
+					</div>
+					<div class="form-group">
+						<textarea class="form-control" placeholder="Your message to the master"></textarea>
+						<!-- <input type="submit" class="form-control" name="yourOrdersMaster" value="yourOrdersMaster"> -->
+					</div>
 				</form>
 			</div>
 			<div class="col-12 col-md-6">
-				<img src="img/_map.png" alt="recruitment campaign picture" />
+				<img src="img/_map.png" class="img-fluid mx-auto d-block" alt="recruitment campaign picture" />
 			</div>
 		</div>
 	</section>
@@ -301,47 +315,49 @@
 																					Footer
 				============================================================================================================== -->
 
-	<footer class="bg-orange text-light row">
-		<ul class="col-4">
-			<li><a href="frontend/aboutUs.html">About us</a></li>
-			<li><a href="#Fellows">Fellows</a></li>
-			<li><a href="#JoinTheArmy">Join our army</a></li>
-		</ul>
-		<ul class="col-4">
-			<li><a href="frontend/faq.html">FAQ</a></li>
-			<li><a href="frontend/rewardConditions.html">Reward conditions</a></li>
-			<li><a href="frontend/legalMentions.html">Legal mentions</a></li>
-		</ul>
-		<p class="col-4">
-			<a href="http://www.Sauron4Ever.com">Sauron4Ever.com</a>
-			<br/>
-			<a href="twitter">Follow him also on twitter</a>
-			<br/>
-			<br/>
-			<img src="img/_logo.png" alt="logo">
-		</p>
-	</footer>
+	<footer class="bg-orange text-light container-fluid">
+		<div class="row">
+			<ul class="col-4">
+				<li><a href="frontend/aboutUs.html">About us</a></li>
+					<li><a href="#Fellows">Fellows</a></li>
+					<li><a href="#JoinTheArmy">Join our army</a></li>
+					</ul>
+					<ul class="col-4">
+						<li><a href="frontend/faq.html">FAQ</a></li>
+						<li><a href="frontend/rewardConditions.html">Reward conditions</a></li>
+						<li><a href="frontend/legalMentions.html">Legal mentions</a></li>
+					</ul>
+					<p class="col-4">
+						<a href="http://www.Sauron4Ever.com">Sauron4Ever.com</a>
+						<br/>
+						<a href="twitter">Follow him also on twitter</a>
+						<br/>
+						<br/>
+						<img src="img/_logo.png" alt="logo">
+					</p>
+				</div>
+				</footer>
 
 
-	<!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<!-- Javascript de Bootstrap -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script>
-		// Scrollspy fluide
-		$(function() {
-			$('header a').on('click', function(e) {
-				e.preventDefault();
-				var hash = this.hash;
-				$('html, body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000, function() {
-					window.location.hash = hash;
-				});
-			});
-		});
-	</script>
+				<!-- jQuery -->
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+				<!-- Javascript de Bootstrap -->
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+				<script>
+					// Scrollspy fluide
+					$(function() {
+						$('header a').on('click', function(e) {
+							e.preventDefault();
+							var hash = this.hash;
+							$('html, body').animate({
+								scrollTop: $(this.hash).offset().top
+							}, 1000, function() {
+								window.location.hash = hash;
+							});
+						});
+					});
+				</script>
 </body>
 
 </html>
