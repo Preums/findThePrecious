@@ -24,15 +24,15 @@
 																			Header and Navbar
 		============================================================================================================== -->
 
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-orange">
-			<p class="navbar-brand"><img src="img/_logo.png" alt="Find the precious"></p>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<header id="top">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-orange fixed-top">
+			<a class="navbar-brand" href="#top"><img src="img/_logo.png" alt="Find the precious"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav w-100 justify-content-end">
-					<li class="nav-item"><a class="nav-link text-white" href="#Fellows">Fellows</a></li>
+					<li class="nav-item active"><a class="nav-link text-white" href="#Fellows">Fellows</a></li>
 					<li class="nav-item"><a class="nav-link text-white" href="#AboutTheRing">The Ring</a></li>
 					<li class="nav-item"><a class="nav-link text-white" href="#GetMyReward">Get my reward</a></li>
 					<li class="nav-item"><a class="nav-link text-white" href="#JoinTheArmy">Join the army</a></li>
@@ -107,7 +107,7 @@
 		</ul>
 
 <div class="row justify-content-around">
-		<article class="rewardNotice offset-1 col-10 col-md-5 col-lg-3 bg-dark">
+		<article class="rewardNotice offset-1 col-10 col-lg-5 col-xl-3 bg-dark">
 			<div class="rewardPicture" id="gandalf">
 				<img class="img-fluid" src="img/_gandalf.png" alt="Gandalf reward picture">
 					<div class="carousel-caption">
@@ -117,7 +117,7 @@
 			</div>
 			<p>A very dangerous wizard, balrog killer...</p>
 		</article>
-		<article class="rewardNotice offset-1 col-10 col-md-5 col-lg-3 bg-dark bg-dark">
+		<article class="rewardNotice offset-1 col-10 col-lg-5 col-xl-3 bg-dark bg-dark">
 			<div class="rewardPicture" id="aragorn">
 <img class="img-fluid" src="img/_aragorn.png" alt="Gandalf reward picture">
 	<div class="carousel-caption">
@@ -127,7 +127,7 @@
 			</div>
 			<p>Sauron's finger says him his sword is dangerous...</p>
 		</article>
-		<article class="rewardNotice offset-1 col-10 col-md-5 col-lg-3 bg-dark">
+		<article class="rewardNotice offset-1 col-10 col-lg col-xl-3 bg-dark">
 			<div class="rewardPicture dead" id="gimli">
 <img class="img-fluid" src="img/_gimli.png" alt="Gandalf reward picture">
 	<div class="carousel-caption">
@@ -213,7 +213,7 @@
 		<article>
 			<h4 class="bg-orange">Ring Capabilities</h4>
 			<p>What our master Sauron do with the ring?</p>
-			<table class="w-75 mx-auto">
+			<table class="w-90 mx-auto">
 				<thead>
 					<tr>
 						<th>Feature</th>
@@ -344,20 +344,6 @@
 				<!-- Javascript de Bootstrap -->
 				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-				<script>
-					// Scrollspy fluide
-					$(function() {
-						$('header a').on('click', function(e) {
-							e.preventDefault();
-							var hash = this.hash;
-							$('html, body').animate({
-								scrollTop: $(this.hash).offset().top
-							}, 1000, function() {
-								window.location.hash = hash;
-							});
-						});
-					});
-				</script>
-</body>
+				<script src="js/myPrecious.js"></script>
 
 </html>

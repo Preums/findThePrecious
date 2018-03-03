@@ -44,7 +44,7 @@ body {
     font-family: 'party_businessregular', Arial, sans-serif;
     font-size: 2em;
 }
-h2, h3, h4 .btn-custom {
+h2, h3, h4 .btn-custom, .navbar {
     font-family: 'anironregular', Arial, sans-serif;
 }
 h2,h3 {
@@ -97,7 +97,11 @@ hr {
     bottom:0;
 }
 .btn-custom:hover::after {
-  box-shadow: 0 0 5px 2px grey;
+  box-shadow: 0 0 5px 2px darkgrey;
+}
+.btn-custom:hover a {
+  text-decoration: none;
+  color: grey;
 }
 /*
 =========================== Header and Navbar ======================================
@@ -106,7 +110,7 @@ hr {
   padding: 10px 15px 0px 15px;
 }
 nav ul li:not(:last-of-type) a::after {
-      font-size: 15px;
+      font-size: 0.8em;
       content: " |";
       font-family: sans-serif;
 }
@@ -115,13 +119,12 @@ nav ul li:not(:last-of-type) a::after {
     display: none;
   }
 }
-nav ul li:hover {
-  text-decoration: underline;
+.navbar ul li a {
   color: white;
+  font-size: 1rem;
 }
-nav ul li a {
-  color: white;
-  font-size: 30px;
+header nav .active a {
+  text-decoration: underline;
 }
 /*
 =========================== banner ======================================
@@ -144,20 +147,20 @@ nav ul li a {
 /*
 =========================== Fellows ======================================
 */
-.nav-link {
+#Fellows .nav-link {
   color: grey;
   font-size: 2rem;
 }
-.nav-link:hover {
+#Fellows .nav-link:hover {
   color: black;
 }
-.nav-pills .nav-link.active {
+#Fellows .nav-pills .nav-link.active {
   color: #ff5f01;
   border: none;
   background-color: transparent;
   text-decoration: underline;
 }
-.nav-pills .nav-link.active::before, .nav-pills .nav-link.active::after {
+#Fellows .nav-pills .nav-link.active::before, .nav-pills .nav-link.active::after {
   content: " w ";
 }
 
@@ -271,6 +274,9 @@ tr:nth-of-type(odd) {
 td {
   padding-left: 4rem;
 }
+.w-90 {
+  width: 90%;
+}
 
 /*
 =========================== JoinTheArmy ======================================
@@ -313,4 +319,9 @@ footer ul {
 }
 footer a {
   color: white;
+}
+footer a:hover {
+text-decoration: none;
+color:black;
+text-shadow: 0 0 5px grey;
 }
